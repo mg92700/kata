@@ -46,6 +46,20 @@ public class BankServiceImplTest {
             Assert.assertEquals(e.getMessage(), "your balance is insufficient");
         }
     }
+
+    @Test
+    public void testHistorique() {
+        List<String> lstTransaction = new ArrayList<>();
+        Double account =100.00;
+        try {
+            double val1 = salariesServiceImpl.withdrawalMoney(10, account, lstTransaction);
+            double val2 = salariesServiceImpl.withdrawalMoney(10, val1, lstTransaction);
+            double val3 = salariesServiceImpl.withdrawalMoney(10, val2, lstTransaction);
+            Assert.assertEquals(3,lstTransaction.size());
+        } catch (Exception e) {
+            Assert.assertEquals(e.getMessage(), "your balance is insufficient");
+        }
+    }
 }
 
 
