@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class ServiceBankImpl implements ServiceBank{
+public class ServiceBankImpl implements ServiceBank {
 
     @Override
     public double depositeMoney(double value, double sum, List<String> getTransactions) {
@@ -26,5 +26,14 @@ public class ServiceBankImpl implements ServiceBank{
         } else {
             throw new Exception("your balance is insufficient");
         }
+    }
+
+    @Override
+    public StringBuilder historiqueTransaction(List<String> getTransactions) {
+        StringBuilder sb = new StringBuilder();
+        for (String s : getTransactions) {
+            sb.append(s);
+        }
+        return sb;
     }
 }

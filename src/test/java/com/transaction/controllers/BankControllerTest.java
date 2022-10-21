@@ -38,19 +38,6 @@ public class BankControllerTest {
 
     @Test
     public void addSalarie() throws Exception {
-       /* Salarie salarie = new Salarie("ilyes", "raissi", new BigDecimal(444444), "Tunis");
-        given(salarieServiceMock.addsalarie(salarie)).willReturn(salarie);
-        mockMvc.perform(post("/salaries")
-                .contentType(APPLICATION_JSON)
-                .accept(APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(salarie)))
-                .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.nom").value("ilyes"))
-                .andExpect(jsonPath("$.prenom").value("raissi"))
-                .andExpect(jsonPath("$.salaire").value(444444))
-                .andExpect(jsonPath("$.adresse").value("Tunis"));
-        verify(salarieServiceMock, times(1)).addsalarie(salarie);
-        verifyNoMoreInteractions(salarieServiceMock);*/
     }
 
 
